@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Object</h1>
+        <script>
+            var members = {
+                'developer' : 'egoing', // property(속성1)
+                'account' : 'duru', // property(속성2)
+                'designer' : 'leezche', // property(속성3)
+                'printAllMember' : function(){  // property(속성4)
+                    console.log(this.developer);
+                    console.log(this.account);
+                    console.log(this.designer); // 중괄호 안이 Object(객체)가 된다.
+                }               
+            }
+            console.log(members.printAllMember()); //(members.developer); 이걸로해도 된다.
+        </script>
+    </body>
+</html>
