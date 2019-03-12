@@ -19,36 +19,37 @@
         </ol>
         <div id="article">
             <script>
-                function toNight(){
-                    document.querySelector('body').style.backgroundColor = 'black';
-                    document.querySelector('body').style.color = 'white';   
-                    var links = document.querySelector('a');
-                    var i = 0;
-                        while(i < links.length){
-                        links[i].style.color='white';
-                        i= i+1;
-                        }              
-            }
-                function toDay(){
-                    document.querySelector('body').style.backgroundColor = 'white';
-                    document.querySelector('body').style.color = 'black'; 
-                    var links = document.querySelector('a');
-                    var i = 0;
-                    while(i < links.length){
-                        links[i].style.color='black';
-                        i= i+1;}
-            }
+                var Color = {
+                    toNight: function(){
+                        document.querySelector('body').style.backgroundColor = 'black';
+                        document.querySelector('body').style.color = 'white';   
+                        var links = document.querySelector('a');
+                        var i = 0;
+                            while(i < links.length){
+                                links[i].style.color='white';
+                                i= i+1;
+                    }
+                    },
+                    toDay: function(){
+                        document.querySelector('body').style.backgroundColor = 'white';
+                        document.querySelector('body').style.color = 'black'; 
+                        var links = document.querySelector('a');
+                        var i = 0;
+                            while(i < links.length){
+                                links[i].style.color='black';
+                                i= i+1;
+                    }
+                }
             </script>
+
                 <input type="button" id="sdfkh" value="night" onclick="
-                    // 만약 이 버튼의 value 값이 night라면
                     if(this.value === 'night'){
-                        toNight();
+                        Color.toNight();
                         this.value = 'day';
 
                     } else {// 아니라면
-                        toDay();    
+                        Color.toDay();    
                         this.value = 'night';
-
                     }
             ">  
             <h2>Database</h2>
