@@ -15,9 +15,31 @@
                 <li><a href="4.html">www</a></li>
             </ol>
             <div id="article">  
+            <input type="button" value="night" onclick="
+                if(this.value === 'night'){
+                    document.querySelector('body').style.backgroundColor='black';
+                    document.querySelector('body').style.color='white'; 
+                    this.value = 'day';
+
+                    var links = document.querySelector('a');
+                    var i = 0;
+                    while(i < links.length){
+                        links[i].style.color = 'black';
+                        i = i + 1;
+                    }
+
+                } else {
+                    document.querySelector('body').style.backgroundColor='white';
+                    document.querySelector('body').style.color='black';    
+                    this.value = 'night';            
+            }
+            ">
+
+
             <h2>World Wide Web</h2>
             30주년 축하해 :D
             </div>
         </div>
+
     </body>
 </html>
